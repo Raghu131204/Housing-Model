@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {{form.hidden_tag()}}
+        <div>
+            {{form.location.label}}
+            {{form.location}}
+            {% if form.location.errors %}
+                {% for error in form.location.errors %}
+                    <div>{{error}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.total_sqft.label}}
+            {{form.total_sqft}}
+            {% if form. total_sqft.errors %}
+                {% for error in form.total_sqft.errors %}
+                    <div>{{error}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.bath.label}}
+            {{form.bath}}
+            {% if form.bath.errors %}
+                {% for error in form.bath.errors %}
+                    <div>{{error}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.balcony.label}}
+            {{form.balcony}}
+            {% if form.balcony.errors %}
+                {% for error in form.balcony.errors %}
+                    <div>{{error}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.BHK.label}}
+            {{form.BHK}}
+            {% if form.BHK.errors %}
+                {% for error in form.BHK.errors %}
+                    <div>{{error}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.submit()}}
+        </div>
+        <br>
+        <div>
+            {{output}}
+        </div>
+        <br>
+    </form>
+{% endblock %}
+
