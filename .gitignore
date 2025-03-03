@@ -3,3 +3,9 @@
 
 # Ignore all files with the .env extension
 *.env
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache files
+__pycache__/
