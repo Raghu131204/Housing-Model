@@ -2,7 +2,7 @@ from flask import Flask,url_for,render_template
 from forms import InputForm
 import pandas as pd 
 import joblib
-app=Flask(__name__)
+app=Flask(__name__, static_folder='static')
 app.config['SECRET_KEY']="secret_key"
 
 model=joblib.load("model.joblib")

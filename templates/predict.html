@@ -1,66 +1,86 @@
-{% extends "layout.html" %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style2.css')}}">
+</head>
+<body>
+    {% block content %}
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="#">Bengaluru House Price</a>
+            </div>
+            <ul>
+              <li><a href="{{url_for('home')}}">Home</a></li>  
+              <li><a href="{{url_for('predict')}}">Price</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <form action="" method="post">
         {{form.hidden_tag()}}
         <div>
-            {{form.location.label}}
+            <label for="location">{{form.location.label}}</label>
             {{form.location}}
             {% if form.location.errors %}
                 {% for error in form.location.errors %}
-                    <div>{{error}}</div>
+                    <div class="error">{{error}}</div>
                 {% endfor %}
             {% endif %}
         </div>
-        <br>
+
         <div>
-            {{form.total_sqft.label}}
+            <label for="total_sqft">{{form.total_sqft.label}}</label>
             {{form.total_sqft}}
-            {% if form. total_sqft.errors %}
+            {% if form.total_sqft.errors %}
                 {% for error in form.total_sqft.errors %}
-                    <div>{{error}}</div>
+                    <div class="error">{{error}}</div>
                 {% endfor %}
             {% endif %}
         </div>
-        <br>
+
         <div>
-            {{form.bath.label}}
+            <label for="bath">{{form.bath.label}}</label>
             {{form.bath}}
             {% if form.bath.errors %}
                 {% for error in form.bath.errors %}
-                    <div>{{error}}</div>
+                    <div class="error">{{error}}</div>
                 {% endfor %}
             {% endif %}
         </div>
-        <br>
+
         <div>
-            {{form.balcony.label}}
+            <label for="balcony">{{form.balcony.label}}</label>
             {{form.balcony}}
             {% if form.balcony.errors %}
                 {% for error in form.balcony.errors %}
-                    <div>{{error}}</div>
+                    <div class="error">{{error}}</div>
                 {% endfor %}
             {% endif %}
         </div>
-        <br>
+
         <div>
-            {{form.BHK.label}}
+            <label for="BHK">{{form.BHK.label}}</label>
             {{form.BHK}}
             {% if form.BHK.errors %}
                 {% for error in form.BHK.errors %}
-                    <div>{{error}}</div>
+                    <div class="error">{{error}}</div>
                 {% endfor %}
             {% endif %}
         </div>
-        <br>
-        <div>
-            {{form.submit()}}
-        </div>
-        <br>
-        <div>
+
+        <button type="submit">{{form.submit.label.text}}</button>
+
+        <div class="output">
             {{output}}
         </div>
-        <br>
     </form>
-{% endblock %}
-
+    <footer>
+        @ All rights reserved
+    </footer>
+    {% endblock %}
+</body>
+</html>

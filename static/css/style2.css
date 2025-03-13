@@ -1,0 +1,126 @@
+/* General Body Styles */
+*{
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Keeps navbar at the top */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9; /* Optional background color */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    width: 100%; /* Full width navbar */
+    background-color:rgb(6, 6, 23);
+    padding-right: 15px;
+    padding-left:15px;
+    position: fixed; /* Fix it at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensures it's above other content */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navdiv {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+}
+
+li a {
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+/* Form Styles */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: relative; /* Ensure it respects body alignment */
+}
+
+/* Center Form within Body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centers form vertically */
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Label and Input Styles */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0px 0px 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+.output{
+    text-align: center;
+    font-weight: 300;
+}

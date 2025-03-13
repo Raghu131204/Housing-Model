@@ -1,9 +1,29 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
 
-{% block content %}
-<div>
-    <h3>Bengaluru House Price Prediction</h3>
-    <a href="{{url_for('predict')}}">Click here</a>
-</div>
-
-{% endblock content %}
+</head>
+<body>
+    {% block content %}
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="#">Bengaluru House Price</a>
+            </div>
+            <ul>
+              <li><a href="{{url_for('home')}}">Home</a></li>  
+              <li><a href="{{url_for('predict')}}">Price</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <footer>
+        @ All rights reserved
+    </footer>
+    {% endblock content %}
+</body>
+</html>

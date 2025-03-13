@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 import pandas as pd
 from wtforms import SelectField,FloatField,IntegerField,SubmitField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired,NumberRange
 
 train=pd.read_csv("Dataset/train_data.csv")
 test=pd.read_csv("Dataset/test_data.csv")
@@ -24,7 +24,7 @@ class InputForm(FlaskForm):
     )
     balcony=IntegerField(
         label="Balcony",
-        validators=[DataRequired()]
+       validators=[NumberRange(min=0, message="Balcony must be 0 or greater")]
     )
     BHK=IntegerField(
         label="BHK",
